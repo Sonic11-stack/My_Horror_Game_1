@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - key_1
+  - key_2
+  - key_3
+  - key_4
+  - key_5
+  - count_key
   layers:
   - Default
   - TransparentFX
