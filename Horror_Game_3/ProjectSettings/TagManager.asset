@@ -10,6 +10,10 @@ TagManager:
   - key_4
   - key_5
   - count_key
+  - Text_1
+  - Text_2
+  - Text_3
+  - Text
   layers:
   - Default
   - TransparentFX
