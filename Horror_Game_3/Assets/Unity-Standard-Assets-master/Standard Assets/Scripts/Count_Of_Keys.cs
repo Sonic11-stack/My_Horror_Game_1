@@ -11,12 +11,13 @@ public class Count_Of_Keys : MonoBehaviour
     public static int count = 0;
     void Start()
     {
-        count_keys = GameObject.FindGameObjectWithTag("count_key").GetComponent<Text>();
+        count_keys = GameObject.FindGameObjectWithTag("count_of_key_1").GetComponent<Text>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         count_keys.text = Convert.ToString(count);
     }
+    
 }

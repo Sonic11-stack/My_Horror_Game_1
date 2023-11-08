@@ -14,6 +14,17 @@ TagManager:
   - Text_2
   - Text_3
   - Text
+  - Text_4
+  - Text_5
+  - Text_6
+  - sound
+  - Enemy
+  - Dead
+  - area
+  - area_1
+  - find_key
+  - count_of_key
+  - count_of_key_1
   layers:
   - Default
   - TransparentFX
