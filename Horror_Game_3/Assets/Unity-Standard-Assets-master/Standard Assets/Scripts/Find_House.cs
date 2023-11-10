@@ -21,7 +21,7 @@ public class Find_House : MonoBehaviour
         HideObject();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         switch (check_house_1)
@@ -41,8 +41,7 @@ public class Find_House : MonoBehaviour
                     OpenObject();
                     check_house_1 = true;
                     change_text_2.check_2 = false;
-                    //HideObject_1();
-                   // Pass_Time();
+                    
                     break;
                 
             }

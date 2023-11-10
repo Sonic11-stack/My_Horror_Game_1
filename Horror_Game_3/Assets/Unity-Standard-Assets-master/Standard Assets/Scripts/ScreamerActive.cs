@@ -8,13 +8,13 @@ public class ScreamerActive : MonoBehaviour {
     GameObject image;
     GameObject strip;
 
-    //public bool check_text = false;
+    
 
     Text endurance;
 
     [SerializeField] private Change_Text_5 change_text_5;
 
-    //[SerializeField] private Turn_On_Keys turn_on_keys;
+    
 
     
     void Start()
@@ -33,13 +33,7 @@ public class ScreamerActive : MonoBehaviour {
             image.SetActive(false);
             strip.SetActive(false);
             endurance.enabled = false;
-            //check_text = true;
-            //change_text_5.text_6.enabled = false;
-
             
-            //turn_on_keys.find_key.enabled = false;
-            //turn_on_keys.count_of_keys.enabled = false;
-            //turn_on_keys.count_of_keys_1.enabled = false;
 
 
         }

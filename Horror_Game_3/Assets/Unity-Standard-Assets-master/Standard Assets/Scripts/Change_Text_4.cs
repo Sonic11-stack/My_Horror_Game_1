@@ -21,7 +21,7 @@ public class Change_Text_4 : MonoBehaviour
         HideObject();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         switch (check_dead_man_1)
@@ -41,8 +41,6 @@ public class Change_Text_4 : MonoBehaviour
                     OpenObject();
                     check_dead_man_1 = true;
                     change_text_3.check_4_1 = false;
-                    //HideObject_1();
-                    // Pass_Time();
                     break;
 
             }

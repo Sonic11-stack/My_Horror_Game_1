@@ -38,7 +38,7 @@ public class Change_Text_3 : MonoBehaviour
                 break;
         }
        
-        //check_4 = true;
+        
         
         
 
@@ -71,15 +71,7 @@ public class Change_Text_3 : MonoBehaviour
                 
                 Checking();
                 
-                // timer_1 += Time.deltaTime;
-
-               /*  if (timer_1 >= delay && !shouldHide_4)
-                {
-                    check_4 = false;
-                    HideObject();
-                    shouldHide_4 = true;
-
-                } */
+                
                 
 
 

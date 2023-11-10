@@ -7,7 +7,7 @@ public class Change_Text : MonoBehaviour
 {
     public float delay = 3.0f; 
     private float timer = 0.0f;
-    //public static bool shouldHide = false;
+    
     public bool shouldHide = false;
     
 

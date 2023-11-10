@@ -18,7 +18,7 @@ public class Change_Text_5 : MonoBehaviour
         HideObject();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         Check_Keys();

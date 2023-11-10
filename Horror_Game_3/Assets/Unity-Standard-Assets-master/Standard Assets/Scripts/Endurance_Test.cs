@@ -9,9 +9,9 @@ public class Endurance_Test : MonoBehaviour
 {
     public Image endurance_bar;
 
-    public float maxStamina = 100.0f; // ћаксимальна€ выносливость
-    public float staminaRegenRate = 10.0f; // —корость восстановлени€ выносливости в секунду
-    public float staminaConsumptionRate = 20.0f; // —корость расхода выносливости в секунду
+    public float maxStamina = 100.0f; 
+    public float staminaRegenRate = 10.0f; 
+    public float staminaConsumptionRate = 20.0f; 
 
     public float currentStamina;
     private bool canSprint = true;
@@ -31,30 +31,22 @@ public class Endurance_Test : MonoBehaviour
 
         if (isShiftPressed && currentStamina > 0)
         {
-            // –асход выносливости при удержании "Shift"
-            currentStamina -= staminaConsumptionRate * Time.deltaTime;
-            //controller.GetInput(10);
             
-            //CurrentTargetSpeed *= RunMultiplier;
+            currentStamina -= staminaConsumptionRate * Time.deltaTime;
+            
+            
+            
         }
         
         else 
         {
-            // ¬осстановление выносливости
+           
             
             currentStamina += staminaRegenRate * Time.deltaTime;
             
         }
         
-       /* if (currentStamina <= 0)
-        {
-            canSprint = false;
-        }
-        else
-        {
-            canSprint = true;
-        } */
-        // ќграничение выносливости в пределах [0, maxStamina]
+      
         currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina);
         endurance_bar.fillAmount = currentStamina / 100f;
     }

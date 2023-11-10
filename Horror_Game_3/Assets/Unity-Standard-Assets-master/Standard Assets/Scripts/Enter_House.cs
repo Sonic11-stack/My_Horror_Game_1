@@ -38,7 +38,7 @@ public class Enter_House : MonoBehaviour
             image.SetActive(false);
             strip.SetActive(false);
             endurance.enabled = false;
-            //change_text_5.text_6.enabled = false;
+            
             check_final = true;
         }
 

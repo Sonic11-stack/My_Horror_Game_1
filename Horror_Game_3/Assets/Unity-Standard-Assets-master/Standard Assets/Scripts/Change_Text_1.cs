@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
-using UnityEditor.Build.Reporting;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,14 +29,13 @@ public class Change_Text_1 : MonoBehaviour
     void Update()
     {
         
-        switch (change_text.shouldHide)//(Change_Text.shouldHide)
+        switch (change_text.shouldHide)
         {
             
             case true:
-                //if(check_1 == true) 
-                    //OpenObject();
+                
                 Checking();
-                //check = false;
+                
                 timer_1 += Time.deltaTime;
 
                 if (timer_1 >= delay && !shouldHide_1)
@@ -44,12 +43,9 @@ public class Change_Text_1 : MonoBehaviour
                     check_1 = false;
                     HideObject();
                     shouldHide_1 = true;
-                    //Change_Text.shouldHide = false;
+                    
                 }
-                else
-                {
-                    //OpenObject();
-                }
+                
                 
                
                 break;

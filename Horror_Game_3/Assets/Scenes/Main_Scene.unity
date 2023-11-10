@@ -597,7 +597,7 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 30.68124
-  m_SpotAngle: 69
+  m_SpotAngle: 67
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -1243,7 +1243,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 244126596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 031440f7b96c2594692f11862927ca73, type: 3}
+  m_Script: {fileID: 11500000, guid: 7bb6b07577d041d4186e3373b0793f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   monstr: {fileID: 1217489732}
@@ -1256,11 +1256,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 244126596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 840dbd09b7619494cb7deff648da3782, type: 3}
+  m_Script: {fileID: 11500000, guid: e73a4bd03bf54a7459743fd1a0fcb395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   monstr: {fileID: 474697227}
-  change_text_5: {fileID: 0}
 --- !u!65 &244126599
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1331,8 +1330,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244126596}
   m_LocalRotation: {x: -0, y: -0.3042408, z: -0, w: 0.9525952}
-  m_LocalPosition: {x: 322.21, y: 1.94, z: 266.95}
-  m_LocalScale: {x: 1.1544322, y: 3.6386, z: 9.116335}
+  m_LocalPosition: {x: 329.2, y: 1.94, z: 271.92}
+  m_LocalScale: {x: 20.554186, y: 3.6386, z: 9.116335}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -2949,7 +2948,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -6176,8 +6175,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554220879}
   m_LocalRotation: {x: 0.7069998, y: 0.01230159, z: -0.012301651, w: -0.7069998}
-  m_LocalPosition: {x: -0.01722086, y: -0.004725112, z: -0.0011999988}
-  m_LocalScale: {x: -0.26076743, y: -0.023831, z: -0.057147056}
+  m_LocalPosition: {x: 0.027999, y: -0.0042118, z: -0.0012}
+  m_LocalScale: {x: -0.1718945, y: -0.023831, z: -0.057147056}
   m_Children: []
   m_Father: {fileID: 1844945634}
   m_RootOrder: 0
@@ -6565,6 +6564,10 @@ PrefabInstance:
     - target: {fileID: 5400000, guid: 6aab193b7693b5e4c9741f1917d2987c, type: 3}
       propertyPath: m_UseGravity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 6aab193b7693b5e4c9741f1917d2987c, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5400000, guid: 6aab193b7693b5e4c9741f1917d2987c, type: 3}
       propertyPath: m_IsKinematic

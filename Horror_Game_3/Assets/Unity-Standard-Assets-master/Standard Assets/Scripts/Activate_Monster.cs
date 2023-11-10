@@ -13,7 +13,7 @@ public class Activate_Monster : MonoBehaviour
         high_monster.SetActive(false);
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         Turn_On_Monster();
