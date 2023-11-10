@@ -26,4 +26,8 @@ public class Return_To_Menu : MonoBehaviour
             SceneManager.LoadScene("Menu");
            
     }
+    public void Return_Menu_1()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }

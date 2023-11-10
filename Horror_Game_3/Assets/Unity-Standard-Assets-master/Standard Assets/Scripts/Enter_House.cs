@@ -10,6 +10,7 @@ public class Enter_House : MonoBehaviour
     GameObject image;
     GameObject strip;
 
+    
     [SerializeField] private Count_Of_Keys count_of_keys;
 
     [SerializeField] private Change_Text_5 change_text_5;
@@ -18,6 +19,7 @@ public class Enter_House : MonoBehaviour
     Text endurance;
     void Start()
     {
+        
         padlock = GameObject.FindWithTag("padlock");
         image = GameObject.FindWithTag("image");
         strip = GameObject.FindWithTag("strip");
