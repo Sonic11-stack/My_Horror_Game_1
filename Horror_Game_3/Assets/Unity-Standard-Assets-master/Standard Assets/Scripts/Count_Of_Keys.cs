@@ -8,7 +8,8 @@ using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCou
 public class Count_Of_Keys : MonoBehaviour
 {
     public Text count_keys;
-    public static int count = 0;
+    public int count = 0;
+    public bool check_count = false;
     void Start()
     {
         count_keys = GameObject.FindGameObjectWithTag("count_of_key_1").GetComponent<Text>();
@@ -18,6 +19,13 @@ public class Count_Of_Keys : MonoBehaviour
     void Update()
     {
         count_keys.text = Convert.ToString(count);
+        Check_Count();
     }
-    
+    void Check_Count()
+    {
+        if (count == 5)
+        {
+            check_count = true;
+        }
+    }
 }

@@ -8,14 +8,14 @@ public class Change_Text_3 : MonoBehaviour
 
     public float delay = 3.0f;
     private float timer_1 = 0.0f;
-    public static bool shouldHide_4 = false;
-    public static bool check_4 = true;
+    public  bool shouldHide_4 = false;
+    public  bool check_4 = true;
 
-    public static bool check_4_1 = true;
+    public  bool check_4_1 = true;
 
     public Text text_4;
 
-    
+    [SerializeField] private Find_House find_house;
 
     void Start()
     {
@@ -64,7 +64,7 @@ public class Change_Text_3 : MonoBehaviour
     }
     void Found_House()
     {
-        switch (Find_House.check_house_1 && Find_House.check_3)
+        switch (find_house.check_house_1 && find_house.check_3)
         {
 
             case true:

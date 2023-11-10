@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class Change_Text_4 : MonoBehaviour
 {
 
-    public static bool check_dead_man_1 = false;
+    public  bool check_dead_man_1 = false;
     public float delay = 3.0f;
     private float timer = 0.0f;
-    public static bool check_5 = false;
+    public  bool check_5 = false;
 
+    [SerializeField] private Change_Text_3 change_text_3;
 
     public static Text text_5;
 
@@ -34,12 +35,12 @@ public class Change_Text_4 : MonoBehaviour
     {
         if (collider.tag == "Player")
         {
-            switch (Change_Text_3.check_4_1)
+            switch (change_text_3.check_4_1)
             {
                 case true:
                     OpenObject();
                     check_dead_man_1 = true;
-                    Change_Text_3.check_4_1 = false;
+                    change_text_3.check_4_1 = false;
                     //HideObject_1();
                     // Pass_Time();
                     break;

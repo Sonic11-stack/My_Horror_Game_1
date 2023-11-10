@@ -7,11 +7,11 @@ using UnityEngine.UI;
 
 public class Find_House : MonoBehaviour
 {
-    public static bool check_house_1 = false;
+    public bool check_house_1 = false;
     public float delay = 3.0f;
     private float timer = 0.0f;
-    public  static bool check_3 = false;
-   
+    public  bool check_3 = false;
+    [SerializeField] private Change_Text_2 change_text_2;
 
     public Text text_3;
 
@@ -35,12 +35,12 @@ public class Find_House : MonoBehaviour
     {
         if (collider.tag == "Player")
         {
-            switch(Change_Text_2.check_2)
+            switch(change_text_2.check_2)
             {
                 case true:
                     OpenObject();
                     check_house_1 = true;
-                    Change_Text_2.check_2 = false;
+                    change_text_2.check_2 = false;
                     //HideObject_1();
                    // Pass_Time();
                     break;

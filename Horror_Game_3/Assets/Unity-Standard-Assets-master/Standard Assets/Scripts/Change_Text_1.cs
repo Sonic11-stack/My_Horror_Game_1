@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using UnityEditor.Build.Reporting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,8 +9,9 @@ public class Change_Text_1 : MonoBehaviour
 {
     public float delay = 3.0f;
     private float timer_1 = 0.0f;
-    public static bool shouldHide_1 = false;
+    public  bool shouldHide_1 = false;
     public bool check_1 = true;
+    [SerializeField] private Change_Text change_text;
 
     public Text text_1;
 
@@ -27,7 +29,7 @@ public class Change_Text_1 : MonoBehaviour
     void Update()
     {
         
-        switch (Change_Text.shouldHide)
+        switch (change_text.shouldHide)//(Change_Text.shouldHide)
         {
             
             case true:
@@ -42,7 +44,7 @@ public class Change_Text_1 : MonoBehaviour
                     check_1 = false;
                     HideObject();
                     shouldHide_1 = true;
-                    
+                    //Change_Text.shouldHide = false;
                 }
                 else
                 {

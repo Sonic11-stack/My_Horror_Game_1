@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Delete_Key_1 : MonoBehaviour
 {
-    
+    [SerializeField] private Count_Of_Keys count_of_keys;
     void Start()
     {
         
@@ -22,7 +22,7 @@ public class Delete_Key_1 : MonoBehaviour
         {
             
             Destroy(this.gameObject);
-            Count_Of_Keys.count++;
+            count_of_keys.count++;
             
         }
     }

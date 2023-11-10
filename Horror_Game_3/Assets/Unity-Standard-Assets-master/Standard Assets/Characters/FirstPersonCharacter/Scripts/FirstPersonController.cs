@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
+using System.Collections;
 
 namespace UnityStandardAssets.Characters.FirstPerson
 {
@@ -27,6 +28,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+
+        [SerializeField] private Endurance_Test controller;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -55,12 +58,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+            //Cursor.visible = true;
+            //m_MouseLook.SetCursorLock(true);
+            //Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = true;
         }
 
 
-        // Update is called once per frame
+        
         private void Update()
         {
+            //Cursor.visible = true;
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -79,7 +87,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_MoveDir.y = 0f;
             }
-
+            
+            //Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = true;
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
         }
 
@@ -94,6 +104,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void FixedUpdate()
         {
+            //Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = true;
             float speed;
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
@@ -201,7 +213,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void GetInput(out float speed)
+        public void GetInput(out float speed)
         {
             // Read input
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
@@ -215,7 +227,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
 #endif
             // set the desired speed to be walking or running
-            speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
+            //speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
+            
+            if (controller.currentStamina > 5 && !m_IsWalking)
+            {
+                speed = m_RunSpeed;
+            } 
+            
+            else
+            {
+                speed = m_WalkSpeed;
+            }
+           
+
             m_Input = new Vector2(horizontal, vertical);
 
             // normalize input if it exceeds 1 in combined length:

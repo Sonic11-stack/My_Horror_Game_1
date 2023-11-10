@@ -25,6 +25,13 @@ TagManager:
   - find_key
   - count_of_key
   - count_of_key_1
+  - padlock
+  - finish_game
+  - key_6
+  - blood
+  - endurance
+  - strip
+  - image
   layers:
   - Default
   - TransparentFX

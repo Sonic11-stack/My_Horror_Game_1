@@ -7,9 +7,10 @@ public class Change_Text_2 : MonoBehaviour
 {
     //public float delay = 3.0f;
     //private float timer = 0.0f;
-    public static bool shouldHide_2 = false;
+    public bool shouldHide_2 = false;
     //public GameObject house;
-    public static bool check_2 = true;
+    public bool check_2 = true;
+    [SerializeField] private Change_Text_1 change_text_1;
 
     public static Text text_2;
 
@@ -27,7 +28,7 @@ public class Change_Text_2 : MonoBehaviour
     void Update()
     {
 
-        switch (Change_Text_1.shouldHide_1)
+        switch (change_text_1.shouldHide_1)
         {
 
             case true:

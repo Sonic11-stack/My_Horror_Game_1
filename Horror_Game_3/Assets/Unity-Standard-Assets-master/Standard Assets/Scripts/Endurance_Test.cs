@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
+using static UnityStandardAssets.Characters.FirstPerson.RigidbodyFirstPersonController;
 
 public class Endurance_Test : MonoBehaviour
 {
@@ -11,8 +13,10 @@ public class Endurance_Test : MonoBehaviour
     public float staminaRegenRate = 10.0f; // —корость восстановлени€ выносливости в секунду
     public float staminaConsumptionRate = 20.0f; // —корость расхода выносливости в секунду
 
-    private float currentStamina;
+    public float currentStamina;
     private bool canSprint = true;
+
+    [SerializeField] private FirstPersonController controller;
     void Start()
     {
        endurance_bar = GetComponent<Image>();
@@ -22,27 +26,34 @@ public class Endurance_Test : MonoBehaviour
     
     void Update()
     {
-        bool isShiftPressed = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        bool isShiftPressed = Input.GetKey(KeyCode.LeftShift);
+        
 
         if (isShiftPressed && currentStamina > 0)
         {
             // –асход выносливости при удержании "Shift"
             currentStamina -= staminaConsumptionRate * Time.deltaTime;
+            //controller.GetInput(10);
             
+            //CurrentTargetSpeed *= RunMultiplier;
         }
+        
         else 
         {
             // ¬осстановление выносливости
+            
             currentStamina += staminaRegenRate * Time.deltaTime;
+            
         }
-        if (currentStamina <= 0)
+        
+       /* if (currentStamina <= 0)
         {
             canSprint = false;
         }
         else
         {
             canSprint = true;
-        }
+        } */
         // ќграничение выносливости в пределах [0, maxStamina]
         currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina);
         endurance_bar.fillAmount = currentStamina / 100f;
